@@ -10,6 +10,7 @@ export default function Card({
   openIcon,
   closeIcon,
   publishMessage,
+  disabled,
 }) {
   return (
     <View style={styles.card}>
@@ -38,6 +39,7 @@ export default function Card({
           ios_backgroundColor="#b2bec3"
           onValueChange={publishMessage}
           onChange={setValue}
+          disabled={!disabled}
         ></Switch>
       </View>
     </View>

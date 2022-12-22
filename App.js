@@ -84,6 +84,7 @@ export default function App() {
       userName: "LAB_IOT",
       password: "aio_IafX74QMkin1DvorWDyPaE6hEs9y",
     });
+
     return () => {
       client?.disconnect();
     };
@@ -180,6 +181,7 @@ export default function App() {
               openIcon="door-closed"
               closeIcon="door-open"
               publishMessage={publish(0)}
+              disabled={isConnected}
             />
             <Card
               name="Quạt trần"
@@ -189,6 +191,7 @@ export default function App() {
               openIcon="fan"
               closeIcon="fan-off"
               publishMessage={publish(1)}
+              disabled={isConnected}
             />
             <Card
               name="Đèn trần"
@@ -198,6 +201,7 @@ export default function App() {
               openIcon="ceiling-light"
               closeIcon="ceiling-light-outline"
               publishMessage={publish(2)}
+              disabled={isConnected}
             />
             <Gause
               cur={parseInt(temp)}
